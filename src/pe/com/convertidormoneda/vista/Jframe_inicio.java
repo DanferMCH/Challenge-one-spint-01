@@ -36,7 +36,7 @@ public class Jframe_inicio extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == btnBienvenida) {
-			Jframe_menu_conversion menuInicio = new Jframe_menu_conversion();
+			Jframe_menu_principal menuInicio = new Jframe_menu_principal();
 			menuInicio.setVisible(true);
 			this.dispose();
 		}

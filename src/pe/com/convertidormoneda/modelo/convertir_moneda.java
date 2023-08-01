@@ -7,12 +7,12 @@ public class convertir_moneda implements conversiones {
 	monedas valorMoneda = new monedas();
 
 	@Override
-	public float convertir(float numeroDigitado, String moneda, boolean validacion) {
+	public float convertir(float numeroDigitado,boolean validacion,String... moneda) {
 		
 		float tipoCambio = 0;
 		
 		if(validacion) {
-			switch (moneda) {
+			switch (moneda[0]) {
 			case "Dolar":
 					tipoCambio = valorMoneda.getSoles_a_dolar();
 				break;
@@ -34,7 +34,7 @@ public class convertir_moneda implements conversiones {
 				break;
 			}
 		}else {
-			switch (moneda) {
+			switch (moneda[0]) {
 			case "Dolar":
 					tipoCambio = valorMoneda.getDolar_a_soles();
 				break;
